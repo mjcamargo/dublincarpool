@@ -1,0 +1,47 @@
+<% if user_signed_in? %>
+ <div class="text-center">
+    <h1>What do you want to do?</h1>
+              <a class="btn btn-outline-white wow fadeInLeft text-center" href="/profiles" data-wow-delay="0.3s">View my profile</a>
+              <a class="btn btn-outline-white wow fadeInLeft text-center" href="/trips/new" data-wow-delay="0.3s">Offer a Lift</a>
+              <a class="btn btn-outline-white wow fadeInLeft text-center" href="/findlift" data-wow-delay="0.3s">Find a Lift</a>
+              <a class="btn btn-outline-white wow fadeInLeft text-center" href="/trips" data-wow-delay="0.3s">Lifts Offered</a>
+              <a class="btn btn-outline-white wow fadeInLeft text-center" href="/books" data-wow-delay="0.3s">Lifts Booked</a>
+  </div>
+<% else %>
+    <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+              <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Traveling somewhere? </h1>
+              <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up Today! </h1>
+              <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+              <h5 class="mb-3 wow fadeInLeft text-center" data-wow-delay="0.3s">Dublin Carpool is the easiest way to travel economically.</h5>
+              <div class="text-center">
+                    <a class="btn btn-outline-white wow fadeInLeft text-center" href="/users/sign_up" data-wow-delay="0.3s">Create account</a>
+              </div>      
+          </div>
+          <div class="col-md-6 col-xl-5 mb-4">
+              <div class="text-center">
+                    <%= form_for(:user, :url => session_path(:user)) do |f| %>
+                        <h3 class="white-text">
+                          <i class="fas fa-user white-text"></i> Sign In</h3>
+                          <div class="field">
+                              <%= f.label :email %><br />
+                              <%= f.text_field :email %>
+                          </div>
+                          <div class="field">
+                              <%= f.label :password %><br />
+                              <%= f.password_field :password %>
+                          </div>    
+                          <div class="actions">
+                              <%= f.submit "Log in", class: 'btn btn-success'  %>
+                          </div>
+                          <%= link_to "Forgot your password?", new_password_path(:user) %>
+                    <% end %>
+              </div>      
+          </div>                
+        </div>
+      </div>
+    </div>
+<% end %>
+

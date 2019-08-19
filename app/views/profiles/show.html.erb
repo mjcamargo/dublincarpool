@@ -1,0 +1,34 @@
+<table class="center table-striped table-dark">
+  <tr class="bg-primary" >
+    <th colspan="2">My Profile</th>
+  </tr>
+  <tr>
+  
+  <tr>
+    <td>First Name</td>
+    <td> <%= @profile.firstname %></td> 
+  </tr>
+  <tr>
+    <td>Last Name</td>
+    <td> <%= @profile.lastname %></td> 
+  </tr>
+  <tr>
+   <td>Phone Number</td> 
+    <td><%= @profile.phonenumber %></td>
+  </tr>
+  <tr>
+  <td>Location</td> 
+    <td><%= @profile.location %></td>
+  </tr>
+
+</table>
+
+<div style="text-align:center">
+  <%= link_to 'Edit', edit_profile_path(@profile), class: "btn btn-primary" %> 
+</div>
+
+<div style="text-align:center">
+    <%= link_to 'New Book',new_profile_book_path(@profile,@book), class: "btn btn-primary" %>
+</div>
+
+

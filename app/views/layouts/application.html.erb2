@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carpool</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://mdbootstrap.com/previews/docs/latest/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://mdbootstrap.com/previews/docs/latest/css/mdb.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+  <!-- Main navigation -->
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <strong>Dublin Carpool</strong>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedConten-7">
+          <ul class="navbar-nav mr-auto">
+           <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Find a Lift</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Offer a Lift</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            
+          </ul>
+        </div>
+             
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <!-- Full Page Intro -->
+   
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+        <!-- Content -->
+        <div class="container">
+          <!--Grid row-->
+          <div class="row mt-5">
+            <!--Grid column-->
+            <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+              <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Traveling somewhere? </h1>
+              <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up Today! </h1>
+              <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+              <h5 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">Dublin Carpool is the easiest way to travel economically.</h5>
+              <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Learn more</a>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-6 col-xl-5 mb-4">
+              <!--Form-->
+              <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                <div class="card-body">
+                  <!--Header-->
+                  <div class="text-center">
+                    <h3 class="white-text">
+                      <i class="fas fa-user white-text"></i> Register:</h3>
+                    <hr class="hr-light">
+                  </div>
+                  <!--Body-->
+                  <div class="md-form">
+                    <i class="fas fa-user prefix green-text active"></i>
+                    <input type="text" id="form3" class="blue-text form-control">
+                    <label for="form" class="active">Your name</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fas fa-envelope prefix green-text active"></i>
+                    <input type="email" id="form2" class="blue-text form-control">
+                    <label for="form2" class="active">Your email</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fas fa-lock prefix green-text active"></i>
+                    <input type="password" id="form4" class="blue-text form-control">
+                    <label for="form4">Your password</label>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button class="btn btn-indigo">Sign up</button>
+                  </div>
+                </div>
+              </div>
+              <!--/.Form-->
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Content -->
+      </div>
+      <!-- Mask & flexbox options-->
+    </div>
+    
+    
+    <!-- Full Page Intro -->
+  </header>
+  <!-- Main navigation -->
+  <!--Main Layout-->
+  <main>
+    
+    
+  </main>
+  <!--Main Layout-->
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/jquery-3.3.1.min.js"></script>
+  <!-- Tooltips -->
+  <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/mdb.min.js"></script>
+  
+
+  
+  <script>
+  new WOW().init();
+  </script>
+</body>
+
+</html>

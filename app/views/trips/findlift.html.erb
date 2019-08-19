@@ -1,0 +1,29 @@
+
+<h1>Trips Available</h1>
+<table class="center table-striped table-dark">
+  <thead>
+    <tr class="bg-primary">
+      <th>Date</th>
+      <th>Time</th>
+      <th>Price</th>
+      <th>Seats available</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trips.each do |trip| %>
+      <tr >
+        <td><%= trip.date %></td>
+        <td><%= trip.time %></td>
+        <td><%= trip.price %></td>
+        <td><%= trip.seats_available %></td>
+        <td><%= link_to 'Book', new_book_path(:id => trip.id), :class => 'btn btn-primary' %></td>
+
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

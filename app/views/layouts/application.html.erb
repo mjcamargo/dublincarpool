@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dublin Carpoo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://mdbootstrap.com/previews/docs/latest/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://mdbootstrap.com/previews/docs/latest/css/mdb.min.css" rel="stylesheet">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <strong>Dublin Carpool</strong>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedConten-7">
+          <ul class="navbar-nav mr-auto">
+           <li class="nav-item">
+              <a class="nav-link"<%= link_to 'Home', root_path	 %> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" <%= link_to 'Find a Lift', findlift_path	 %> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"<%= link_to 'Offer a Lift', new_trip_path	 %> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"<%= link_to 'Weather', weather_path	 %> </a>
+            </li>
+           
+           
+           <% if user_signed_in? %>
+             <li class="nav-item">
+                  <a class="nav-link"<%= link_to 'Sign out', destroy_user_session_path, 
+                  :method => :delete %></a>
+               </li>  
+             <% else %>
+             <li class="nav-item">
+                  <a class="nav-link"<%= link_to 'Register', new_user_registration_path %></a>
+             </li> 
+             <li class="nav-item">
+                  <a class="nav-link"<%= link_to 'Sign in', new_user_session_path %></a>
+             </li> 
+  
+          <% end %> 
+       </div>
+            
+          </ul>
+        </div>
+             
+      </div>
+    </nav>
+  <div class="container">
+      <body>
+        <p class="notice"><%= notice %></p>
+
+          
+        <%= yield %>
+        
+      
+         <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/jquery-3.3.1.min.js"></script>
+  <!-- Tooltips -->
+  <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/mdb.min.js"></script>
+  
+
+  
+  <script>
+  new WOW().init();
+  </script>
+        
+      </body>
+   </div> 
+</html>

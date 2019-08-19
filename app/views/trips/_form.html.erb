@@ -1,0 +1,52 @@
+<%= javascript_include_tag 'trips'%>
+
+    
+
+<%= form_for([@profile, @trip]) do |form| %>
+  <% if @trip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+      <ul>
+      <% trip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= form.label :date%>
+    <%= form.date_field :date, class: "form-control", id: "date"%>
+ </div>
+ 
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.time_field :time, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pickup_location %>
+    <%= form.text_field :pickup_location , class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destination %>
+    <%= form.text_field :destination, class: 'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seats_available %>
+    <%= form.text_field :seats_available, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+     <%= form.submit 'Create a Trip', class: 'btn btn-success' %>
+  </div>
+ 
+<% end %>
+

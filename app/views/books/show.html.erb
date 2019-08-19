@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<table class="center table-striped table-dark">
+  <tr class="bg-primary" >
+    <th colspan="2">Trip Details</th>
+  </tr>
+  <tr>
+  
+  <tr>
+    <td>Date</td>
+    <td> <%= @trip.date %></td> 
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td> <%= @trip.time %></td> 
+  </tr>
+  <tr>
+   <td>Pickup location</td> 
+    <td><%= @trip.pickup_location %></td>
+  </tr>
+  <tr>
+  <td>Destination</td> 
+    <td><%= @trip.destination %></td>
+  </tr>
+  <td>Price</td> 
+    <td> <%= @trip.price %></td> 
+  </tr>
+  <td>Seats available</td> 
+    <td> <%= @trip.seats_available %></td> 
+  </tr>
+</table>
+
+<div style="text-align:center">
+  <%= link_to 'Edit', edit_trip_path(@trip), class: "btn btn-primary" %> |
+  <%= link_to 'Back', trips_path, class: "btn btn-primary" %>
+</div>

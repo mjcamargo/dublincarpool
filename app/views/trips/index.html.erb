@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
+<% if @trips.empty? %>
+ <h1>No trips found</h1>
+<% else %>
+ <h1>Trips</h1>
+<table class="center table-striped table-dark">
+  <thead>
+    <tr class="bg-primary">
+      <th>Date</th>
+      <th>Time</th>
+      <th>Price</th>
+      <th>Seats available</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trips.each do |trip| %>
+      <tr >
+        <td><%= trip.date %></td>
+        <td><%= trip.time %></td>
+        <td><%= trip.price %></td>
+        <td><%= trip.seats_available %></td>
+        <td><%= link_to 'show', profile_trip_path(@profile, trip), :class => 'btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_profile_trip_path(@profile, trip), :class => 'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', profile_trip_path(@profile, trip), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% end %>
+
+<div style="text-align:center">
+    <%= link_to 'New Trip',new_profile_trip_path(@profile,@trip), class: "btn btn-primary" %>
+</div>
+
+<% end %>
