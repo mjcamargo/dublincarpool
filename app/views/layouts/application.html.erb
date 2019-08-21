@@ -31,9 +31,11 @@
               <a class="nav-link"<%= link_to 'Offer a Lift', new_trip_path	 %> </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"<%= link_to 'Weather', weather_path	 %> </a>
+              <a class="nav-link"<%= link_to 'Weather', '/weather'	 %> </a>
             </li>
-           
+           <li class="nav-item">
+              <a class="nav-link"<%= link_to 'Geodata', '/weathertest'	 %> </a>
+            </li>
            
            <% if user_signed_in? %>
              <li class="nav-item">

@@ -1,0 +1,6 @@
+<%= form_tag("searchweather", method: "post") do %>
+<%= label_tag(:search_weather, "Search for weather in Ireland:") %>
+<%= text_field_tag(:search_weather) %>
+<%= submit_tag("Search Weather",class: 'btn btn-success') %>
+<% end %>
+

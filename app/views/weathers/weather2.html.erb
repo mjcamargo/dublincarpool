@@ -1,0 +1,15 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="//geodata.solutions/includes/statecity.js"></script>
+<%= form_tag("searchweather", method: "post") do %>
+<%= label_tag(:search_weather, "Search for weather in Ireland:") %>
+
+<input type="hidden" name="country" id="countryId" value="IE"/>
+<select name="state" class="states order-alpha" id="stateId">
+    <option value="">Select State</option>
+</select>
+<select name="city" class="cities order-alpha" id="cityId">
+    <option value="">Select City</option>
+</select>
+
+<%= submit_tag("Search Weather",class: 'btn btn-success') %>
+<% end %>

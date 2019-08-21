@@ -80,3 +80,5 @@ gem 'httparty'
 
 gem 'rest-client'
 
+gem 'omniauth'
+gem 'omniauth-facebook'

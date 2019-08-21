@@ -1,5 +1,3 @@
-
-
 class Event
 require 'rest-client'
 require 'json'

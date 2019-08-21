@@ -4,13 +4,13 @@ class EventController < ApplicationController
   end
   
   def search
-     q = 'dublin,ie'
+    q = 'dublin,ie'
     @events = Event.new.events(q)
-  rescue StandardError => e
-    render json: { errors: e.message }, status: :unprocessable_entity
-    redirect_to weather_path
+   rescue StandardError => e
+      render json: { errors: e.message }, status: :unprocessable_entity
+      redirect_to weather_path
 
-  end  
+   end  
   
   
 end

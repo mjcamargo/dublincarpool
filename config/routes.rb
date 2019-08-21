@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :weathers
   get 'event/index'
   get 'meetup/index'
   get 'books/index'
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   end  
   resources:trips
   get 'index3' => 'trips#index2'
-  get 'weather' => 'event#search'
+ 
   get 'newsearch' => 'event#newsearch'
 
 
@@ -23,6 +24,10 @@ Rails.application.routes.draw do
   resources:books
   
   get 'findlift' => 'trips#findlift'
+  get 'weather' => 'weathers#weather'
+  get 'weathertest' => 'weathers#weather2'
+  match 'searchweather', to: 'weathers#getinfoweather', via: [:get, :post]
+  
 
     
   devise_for :users

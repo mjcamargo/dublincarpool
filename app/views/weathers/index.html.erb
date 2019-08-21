@@ -1,0 +1,21 @@
+<table class="center table-striped table-dark">
+  <tr class="bg-primary" >
+    <th colspan="2">Weather in <%= params[:name]%></th>
+  </tr>
+  <tr>
+  <tr>
+    <td>Current Temperature</td>
+    <td> <%= params[:main][:temp]%>°C</td> 
+  </tr>
+  <tr>
+    <td>Maximum Temperature</td>
+    <td><%= params[:main][:temp_max] %>°C</td> 
+  </tr>
+  <tr>
+    <td>Minimum Temperature</td>
+    <td><%= params[:main][:temp_max] %>°C</td> 
+  </tr>
+ 
+</table>
+
+<br>
